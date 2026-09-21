@@ -1,94 +1,126 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PizzaRewards
+namespace AuthenticationSystem
 {
     class Program
     {
-        static void Main(string[] args)
+        static string parseData(string record, int field)
         {
-            Console.WriteLine("=================================================");
-            Console.WriteLine("  KamyabLife Autonomous Pizza Drone Rewards  ");
-            Console.WriteLine("=================================================\n");
-
-            // Standard Test Case from Lab Manual:
-            Console.WriteLine("Running Test Case: pizza_points(5, 20)");
-            pizza_points(5, 20);
-
-            Console.WriteLine("\n-------------------------------------------------");
-            Console.WriteLine("Enter custom criteria to test:");
-            Console.Write("Enter minimum orders (N): ");
-            string nInput = Console.ReadLine();
-            
-            if (!string.IsNullOrWhiteSpace(nInput) && int.TryParse(nInput, out int minOrders))
+            int comma = 1;
+            string item = "";
+            for (int x = 0; x < record.Length; x++)
             {
-                Console.Write("Enter minimum order price (Y): ");
-                if (int.TryParse(Console.ReadLine(), out int minPrice))
+                if (record[x] == ',')
                 {
-                    Console.WriteLine($"\nResults for pizza_points({minOrders}, {minPrice}):");
-                    pizza_points(minOrders, minPrice);
+                    comma++;
+                }
+                else if (comma == field)
+                {
+                    item = item + record[x];
                 }
             }
+            return item;
+        }
 
-            Console.WriteLine("\nPress any key to exit...");
+        static void readData(string path, string[] names, string[] password)
+        {
+            int x = 0;
+            if (File.Exists(path))
+            {
+                StreamReader fileVariable = new StreamReader(path);
+                string record;
+                while ((record = fileVariable.ReadLine()) != null)
+                {
+                    names[x] = parseData(record, 1);
+                    password[x] = parseData(record, 2);
+                    x++;
+                    if (x >= 5)
+                    {
+                        break;
+                    }
+                }
+                fileVariable.Close();
+            }
+            else
+            {
+                Console.WriteLine("Not Exists");
+            }
+        }
+
+        static void signIn(string n, string p, string[] names, string[] password)
+        {
+            bool flag = false;
+            for (int x = 0; x < 5; x++)
+            {
+                if (n == names[x] && p == password[x])
+                {
+                    Console.WriteLine("Valid User");
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag == false)
+            {
+                Console.WriteLine("Invalid User");
+            }
             Console.ReadKey();
         }
 
-        static void pizza_points(int minOrders, int minPrice)
+        static void signUp(string path, string n, string p)
         {
-            string filePath = "Customers.txt";
+            StreamWriter file = new StreamWriter(path, true);
+            file.WriteLine(n + "," + p);
+            file.Flush();
+            file.Close();
+        }
 
-            if (!File.Exists(filePath))
+        static int menu()
+        {
+            Console.WriteLine("1. Sign In");
+            Console.WriteLine("2. Sign Up");
+            Console.WriteLine("3. Exit");
+            Console.Write("Enter Option: ");
+            int option = int.Parse(Console.ReadLine());
+            return option;
+        }
+
+        static void Main(string[] args)
+        {
+          
+            string path = "textfile.txt";
+
+            string[] names = new string[5];
+            string[] password = new string[5];
+            int option;
+
+            do
             {
-                Console.WriteLine("Error: Customers.txt not found.");
-                return;
-            }
+                readData(path, names, password);
+                Console.Clear();
+                option = menu();
+                Console.Clear();
 
-            string[] lines = File.ReadAllLines(filePath);
-            bool anyQualified = false;
-
-            foreach (string line in lines)
-            {
-                if (string.IsNullOrWhiteSpace(line)) continue;
-                int openBracketIndex = line.IndexOf('[');
-                int closeBracketIndex = line.IndexOf(']');
-
-                if (openBracketIndex == -1 || closeBracketIndex == -1) continue;
-                string headerPart = line.Substring(0, openBracketIndex).Trim();
-                int lastSpaceIndex = headerPart.LastIndexOf(' ');
-                if (lastSpaceIndex == -1) continue;
-
-                string customerName = headerPart.Substring(0, lastSpaceIndex).Trim();
-                string ordersBody = line.Substring(openBracketIndex + 1, closeBracketIndex - openBracketIndex - 1).Trim();
-                string[] orderStrings = ordersBody.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-
-                int qualifyingCount = 0;
-                foreach (string orderStr in orderStrings)
+                if (option == 1)
                 {
-                    if (int.TryParse(orderStr.Trim(), out int price))
-                    {
-                        if (price >= minPrice)
-                        {
-                            qualifyingCount++;
-                        }
-                    }
+                    Console.WriteLine("Enter Name: ");
+                    string n = Console.ReadLine();
+                    Console.WriteLine("Enter Password: ");
+                    string p = Console.ReadLine();
+                    signIn(n, p, names, password);
                 }
-
-                if (qualifyingCount >= minOrders)
+                else if (option == 2)
                 {
-                    Console.WriteLine($"\"{customerName}\"");
-                    anyQualified = true;
+                    Console.WriteLine("Enter New Name: ");
+                    string n = Console.ReadLine();
+                    Console.WriteLine("Enter New Password: ");
+                    string p = Console.ReadLine();
+                    signUp(path, n, p);
                 }
             }
+            while (option < 3);
 
-            if (!anyQualified)
-            {
-                Console.WriteLine("No customers currently qualify for a free pizza.");
-            }
+            Console.Read();
         }
     }
 }
