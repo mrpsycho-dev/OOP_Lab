@@ -11,7 +11,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            string path = "G:\\OOP 2022\\BootingCSharp\\textfile.txt";
+            string path = "E:\\textfile.txt";
             if (File.Exists(path))
             {
                 StreamReader fileVariable = new StreamReader(path);

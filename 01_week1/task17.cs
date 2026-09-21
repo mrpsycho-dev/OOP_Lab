@@ -11,7 +11,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            string path = "G:\\OOP 2022\\BootingCSharp\\textfile.txt";
+            string path = "E:\\test.txt";
             StreamWriter filevariable = new StreamWriter(path, true);
             filevariable.WriteLine("hello");
             filevariable.Flush();
