@@ -38,12 +38,6 @@ namespace PizzaRewards
             Console.ReadKey();
         }
 
-        /// <summary>
-        /// Reads customer purchase records from Customers.txt and displays
-        /// the names of customers eligible for a free pizza.
-        /// </summary>
-        /// <param name="minOrders">Minimum number of qualifying orders (N)</param>
-        /// <param name="minPrice">Minimum price for an order to qualify (Y)</param>
         static void pizza_points(int minOrders, int minPrice)
         {
             string filePath = "Customers.txt";
@@ -60,21 +54,15 @@ namespace PizzaRewards
             foreach (string line in lines)
             {
                 if (string.IsNullOrWhiteSpace(line)) continue;
-
-                // Format: [Customer Name] [Order Count] [price1,price2,...]
                 int openBracketIndex = line.IndexOf('[');
                 int closeBracketIndex = line.IndexOf(']');
 
                 if (openBracketIndex == -1 || closeBracketIndex == -1) continue;
-
-                // Extract customer name & total order count before '['
                 string headerPart = line.Substring(0, openBracketIndex).Trim();
                 int lastSpaceIndex = headerPart.LastIndexOf(' ');
                 if (lastSpaceIndex == -1) continue;
 
                 string customerName = headerPart.Substring(0, lastSpaceIndex).Trim();
-
-                // Extract orders inside bracket: "22,30,11,17,15,52,27,12"
                 string ordersBody = line.Substring(openBracketIndex + 1, closeBracketIndex - openBracketIndex - 1).Trim();
                 string[] orderStrings = ordersBody.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -90,7 +78,6 @@ namespace PizzaRewards
                     }
                 }
 
-                // Check if customer meets or exceeds minimum orders
                 if (qualifyingCount >= minOrders)
                 {
                     Console.WriteLine($"\"{customerName}\"");

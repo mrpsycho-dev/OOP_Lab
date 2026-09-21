@@ -5,7 +5,6 @@ namespace AuthenticationSystem
 {
     class Program
     {
-        // Extracts a specific comma-separated token by 1-based field index
         static string parseData(string record, int field)
         {
             int comma = 1;
@@ -24,7 +23,6 @@ namespace AuthenticationSystem
             return item;
         }
 
-        // Reads up to 5 user credentials from the file into parallel arrays
         static void readData(string path, string[] names, string[] password)
         {
             int x = 0;
@@ -50,7 +48,6 @@ namespace AuthenticationSystem
             }
         }
 
-        // Validates user credentials against loaded records
         static void signIn(string n, string p, string[] names, string[] password)
         {
             bool flag = false;
@@ -70,7 +67,6 @@ namespace AuthenticationSystem
             Console.ReadKey();
         }
 
-        // Appends a new user record (name,password) to the file
         static void signUp(string path, string n, string p)
         {
             StreamWriter file = new StreamWriter(path, true);
@@ -79,7 +75,6 @@ namespace AuthenticationSystem
             file.Close();
         }
 
-        // Displays the user menu and reads the selected option
         static int menu()
         {
             Console.WriteLine("1. Sign In");
@@ -92,8 +87,7 @@ namespace AuthenticationSystem
 
         static void Main(string[] args)
         {
-            // Note: Use "textfile.txt" for local execution, or set to your lab directory:
-            // string path = @"G:\OOP 2022\BootingCSharp\textfile.txt";
+          
             string path = "textfile.txt";
 
             string[] names = new string[5];

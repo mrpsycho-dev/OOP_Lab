@@ -8,7 +8,6 @@ namespace Test
 {
     class Program
     {
-        // User-defined static method to perform addition
         static int add(int n1, int n2)
         {
             return n1 + n2;

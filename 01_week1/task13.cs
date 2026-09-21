@@ -10,7 +10,6 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            // Taking input
             int[] numbers = new int[3];
             for (int idx = 0; idx < 3; idx++)
             {
@@ -18,7 +17,6 @@ namespace Test
                 numbers[idx] = int.Parse(Console.ReadLine());
             }
 
-            // Finding the Largest
             int largest = -1;
             for (int idx = 0; idx < 3; idx++)
             {
