@@ -13,3 +13,6 @@ C:\Users\Waseem\Downloads\StudentManagement\StudentManagement\obj\Debug\net8.0\S
 C:\Users\Waseem\Downloads\StudentManagement\StudentManagement\obj\Debug\net8.0\StudentManagement.genruntimeconfig.cache
 C:\Users\Waseem\Downloads\StudentManagement\StudentManagement\obj\Debug\net8.0\ref\StudentManagement.dll
 C:\Users\Waseem\Downloads\StudentManagement\StudentManagement\obj\Debug\net8.0\StudentM.FBDC7194.Up2Date
+C:\Users\Waseem\Downloads\StudentManagement\StudentManagement\bin\Debug\net8.0\Data\courses.txt
+C:\Users\Waseem\Downloads\StudentManagement\StudentManagement\bin\Debug\net8.0\Data\enrollments.txt
+C:\Users\Waseem\Downloads\StudentManagement\StudentManagement\bin\Debug\net8.0\Data\students.txt

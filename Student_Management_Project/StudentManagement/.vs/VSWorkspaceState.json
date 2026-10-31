@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Models",
+    "\\Repositories",
+    "\\Services",
     "\\UI"
   ],
-  "SelectedNode": "\\UI\\StudentUI.cs",
+  "SelectedNode": "\\obj",
   "PreviewInSolutionExplorer": false
 }
