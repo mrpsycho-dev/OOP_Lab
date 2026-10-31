@@ -1,10 +1,3 @@
-// ============================================================
-// LAYER   : Model
-// PURPOSE : Holds the data of ONE course. Nothing else.
-// USED BY : CourseUI creates it, CourseService passes it on,
-//           CourseRepository stores it.
-// ============================================================
-
 namespace StudentManagement.Models
 {
     public class Course

@@ -1,11 +1,3 @@
-// ============================================================
-// LAYER   : UI
-// PURPOSE : Talks to the person at the keyboard about courses.
-//           It reads input and prints output. It makes NO decisions.
-// USED BY : Program.cs (main menu calls ShowMenu)
-// TALKS TO: CourseService, Course (Model)
-// ============================================================
-
 using System;
 using System.Collections.Generic;
 using StudentManagement.Models;
@@ -27,13 +19,14 @@ namespace StudentManagement.UI
             bool running = true;
             while (running)
             {
-                Console.WriteLine();
+                Console.Clear();
                 Console.WriteLine("--- Course Menu ---");
                 Console.WriteLine("1. Add a course");
                 Console.WriteLine("2. Show all courses");
                 Console.WriteLine("0. Back to main menu");
                 Console.Write("Choose: ");
                 string choice = Console.ReadLine();
+                Console.Clear();
 
                 if (choice == "1")
                 {
@@ -50,6 +43,13 @@ namespace StudentManagement.UI
                 else
                 {
                     Console.WriteLine("Invalid choice.");
+                }
+
+                if (running)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Press any key to continue...");
+                    Console.ReadKey(true);
                 }
             }
         }

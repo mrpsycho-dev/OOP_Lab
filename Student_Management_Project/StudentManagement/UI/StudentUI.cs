@@ -1,11 +1,3 @@
-// ============================================================
-// LAYER   : UI
-// PURPOSE : Talks to the person at the keyboard about students.
-//           It reads input and prints output. It makes NO decisions.
-// USED BY : Program.cs (main menu calls ShowMenu)
-// TALKS TO: StudentService, Student (Model)
-// ============================================================
-
 using System;
 using System.Collections.Generic;
 using StudentManagement.Models;
@@ -15,7 +7,6 @@ namespace StudentManagement.UI
 {
     public class StudentUI
     {
-        // Received from Program.cs through the constructor.
         private StudentService studentService;
 
         public StudentUI(StudentService studentService)
@@ -28,13 +19,14 @@ namespace StudentManagement.UI
             bool running = true;
             while (running)
             {
-                Console.WriteLine();
+                Console.Clear();
                 Console.WriteLine("--- Student Menu ---");
                 Console.WriteLine("1. Add a student");
                 Console.WriteLine("2. Show all students");
                 Console.WriteLine("0. Back to main menu");
                 Console.Write("Choose: ");
                 string choice = Console.ReadLine();
+                Console.Clear();
 
                 if (choice == "1")
                 {
@@ -51,6 +43,13 @@ namespace StudentManagement.UI
                 else
                 {
                     Console.WriteLine("Invalid choice.");
+                }
+
+                if (running)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Press any key to continue...");
+                    Console.ReadKey(true);
                 }
             }
         }
@@ -71,10 +70,8 @@ namespace StudentManagement.UI
             Console.Write("Enter email: ");
             string email = Console.ReadLine();
 
-            // Step 2 of the flow: the UI creates the Model object...
             Student student = new Student(id, name, email);
 
-            // Step 3: ...and hands it to the Service.
             string message = studentService.AddStudent(student);
             Console.WriteLine(message);
         }

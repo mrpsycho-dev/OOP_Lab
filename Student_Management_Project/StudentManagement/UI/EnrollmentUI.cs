@@ -1,12 +1,3 @@
-// ============================================================
-// LAYER   : UI
-// PURPOSE : Talks to the person at the keyboard about enrollments.
-//           It collects a StudentID and a CourseID, then asks the
-//           Service to do the work. It checks NO rules itself.
-// USED BY : Program.cs (main menu calls ShowMenu)
-// TALKS TO: EnrollmentService, Enrollment (Model)
-// ============================================================
-
 using System;
 using System.Collections.Generic;
 using StudentManagement.Models;
@@ -28,13 +19,14 @@ namespace StudentManagement.UI
             bool running = true;
             while (running)
             {
-                Console.WriteLine();
+                Console.Clear();
                 Console.WriteLine("--- Enrollment Menu ---");
                 Console.WriteLine("1. Enroll a student in a course");
                 Console.WriteLine("2. Show all enrollments");
                 Console.WriteLine("0. Back to main menu");
                 Console.Write("Choose: ");
                 string choice = Console.ReadLine();
+                Console.Clear();
 
                 if (choice == "1")
                 {
@@ -51,6 +43,13 @@ namespace StudentManagement.UI
                 else
                 {
                     Console.WriteLine("Invalid choice.");
+                }
+
+                if (running)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Press any key to continue...");
+                    Console.ReadKey(true);
                 }
             }
         }
@@ -73,7 +72,6 @@ namespace StudentManagement.UI
                 return;
             }
 
-            // The UI does not check anything. It just asks the Service and prints the answer.
             string message = enrollmentService.Enroll(studentId, courseId);
             Console.WriteLine(message);
         }
