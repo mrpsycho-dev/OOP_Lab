@@ -1,0 +1,398 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CC\\source\\repos\\Layered BP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\repository\\historyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\repository\\historyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\model\\historymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\model\\historymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\ui\\cartui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\ui\\cartui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\ui\\toyui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\ui\\toyui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\ui\\userui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\ui\\userui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\service\\toyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\service\\toyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\repository\\toyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\repository\\toyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\model\\toymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\model\\toymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\common\\inputhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\common\\inputhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\service\\historyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\service\\historyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\service\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\service\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\repository\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\repository\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\model\\cartmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\model\\cartmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\ui\\historyui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\ui\\historyui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\repository\\salerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\repository\\salerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\model\\salesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\model\\salesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\ui\\saleui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\ui\\saleui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\service\\saleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\service\\saleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\model\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\model\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\layered bp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\layered bp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|c:\\users\\cc\\source\\repos\\layered bp\\layered bp\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7409A2D5-6BA0-F777-410F-1DF8DFACA19F}|Layered BP\\Layered BP.csproj|solutionrelative:layered bp\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ToyService.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Service\\ToyService.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Service\\ToyService.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Service\\ToyService.cs",
+              "RelativeToolTip": "Layered BP\\Service\\ToyService.cs",
+              "ViewState": "AgIAAEEAAAAgY2ZmZmYzwFgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T21:08:23.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ToyUI.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\UI\\ToyUI.cs",
+              "RelativeDocumentMoniker": "Layered BP\\UI\\ToyUI.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\UI\\ToyUI.cs",
+              "RelativeToolTip": "Layered BP\\UI\\ToyUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T21:03:26.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserUI.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\UI\\UserUI.cs",
+              "RelativeDocumentMoniker": "Layered BP\\UI\\UserUI.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\UI\\UserUI.cs",
+              "RelativeToolTip": "Layered BP\\UI\\UserUI.cs",
+              "ViewState": "AgIAALoAAAAAAAAAAAA7wMgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T21:41:24.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CartUI.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\UI\\CartUI.cs",
+              "RelativeDocumentMoniker": "Layered BP\\UI\\CartUI.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\UI\\CartUI.cs",
+              "RelativeToolTip": "Layered BP\\UI\\CartUI.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAqwH0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T21:33:42.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HistoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Repository\\HistoryRepository.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Repository\\HistoryRepository.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Repository\\HistoryRepository.cs",
+              "RelativeToolTip": "Layered BP\\Repository\\HistoryRepository.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T22:22:01.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HistoryModel.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Model\\HistoryModel.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Model\\HistoryModel.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Model\\HistoryModel.cs",
+              "RelativeToolTip": "Layered BP\\Model\\HistoryModel.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T22:05:48.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Program.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Program.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Program.cs",
+              "RelativeToolTip": "Layered BP\\Program.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwB8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T18:43:06.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ToyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Repository\\ToyRepository.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Repository\\ToyRepository.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Repository\\ToyRepository.cs",
+              "RelativeToolTip": "Layered BP\\Repository\\ToyRepository.cs",
+              "ViewState": "AgIAACkAAADAZGZmZmYxwEIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T21:35:39.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ToyModel.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Model\\ToyModel.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Model\\ToyModel.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Model\\ToyModel.cs",
+              "RelativeToolTip": "Layered BP\\Model\\ToyModel.cs",
+              "ViewState": "AgIAAAgAAABAZWZmZmYkwBwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T21:04:56.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "inputhelper.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Common\\inputhelper.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Common\\inputhelper.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Common\\inputhelper.cs",
+              "RelativeToolTip": "Layered BP\\Common\\inputhelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T21:15:22.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HistoryService.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Service\\HistoryService.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Service\\HistoryService.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Service\\HistoryService.cs",
+              "RelativeToolTip": "Layered BP\\Service\\HistoryService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T20:21:52.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CartModel.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Model\\CartModel.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Model\\CartModel.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Model\\CartModel.cs",
+              "RelativeToolTip": "Layered BP\\Model\\CartModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T21:02:31.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CartRepository.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Repository\\CartRepository.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Repository\\CartRepository.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Repository\\CartRepository.cs",
+              "RelativeToolTip": "Layered BP\\Repository\\CartRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T20:05:56.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Service\\CartService.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Service\\CartService.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Service\\CartService.cs",
+              "RelativeToolTip": "Layered BP\\Service\\CartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T21:01:19.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HistoryUI.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\UI\\HistoryUI.cs",
+              "RelativeDocumentMoniker": "Layered BP\\UI\\HistoryUI.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\UI\\HistoryUI.cs",
+              "RelativeToolTip": "Layered BP\\UI\\HistoryUI.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T21:25:20.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SaleUI.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\UI\\SaleUI.cs",
+              "RelativeDocumentMoniker": "Layered BP\\UI\\SaleUI.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\UI\\SaleUI.cs",
+              "RelativeToolTip": "Layered BP\\UI\\SaleUI.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA7wCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T21:20:16.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Service\\UserService.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Service\\UserService.cs",
+              "RelativeToolTip": "Layered BP\\Service\\UserService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T20:25:40.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SaleService.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Service\\SaleService.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Service\\SaleService.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Service\\SaleService.cs",
+              "RelativeToolTip": "Layered BP\\Service\\SaleService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAmwDEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T20:16:09.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SaleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Repository\\SaleRepository.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Repository\\SaleRepository.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Repository\\SaleRepository.cs",
+              "RelativeToolTip": "Layered BP\\Repository\\SaleRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T22:06:20.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Model\\UserModel.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Model\\UserModel.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Model\\UserModel.cs",
+              "RelativeToolTip": "Layered BP\\Model\\UserModel.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T22:06:04.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SalesModel.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Model\\SalesModel.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Model\\SalesModel.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Model\\SalesModel.cs",
+              "RelativeToolTip": "Layered BP\\Model\\SalesModel.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T22:05:56.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Layered BP\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "Layered BP\\Repository\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T21:32:06.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Layered BP.csproj",
+              "DocumentMoniker": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Layered BP.csproj",
+              "RelativeDocumentMoniker": "Layered BP\\Layered BP.csproj",
+              "ToolTip": "C:\\Users\\CC\\source\\repos\\Layered BP\\Layered BP\\Layered BP.csproj",
+              "RelativeToolTip": "Layered BP\\Layered BP.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-20T19:25:57.538Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
