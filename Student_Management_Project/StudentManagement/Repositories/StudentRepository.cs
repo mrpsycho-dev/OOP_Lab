@@ -1,72 +1,37 @@
-using System.Collections.Generic;
-using System.IO;
 using StudentManagement.Models;
 
-namespace StudentManagement.Repositories
+namespace StudentManagement.Repositories;
+
+public class StudentRepository(string filePath)
 {
-    public class StudentRepository
+    private readonly List<Student> students = File.ReadAllLines(filePath)
+        .Where(line => line != "")
+        .Select(line => line.Split('|'))
+        .Select(parts => new Student(int.Parse(parts[0]), parts[1], parts[2]))
+        .ToList();
+
+    public void Add(Student student)
     {
-        private List<Student> students = new List<Student>();
-        private string filePath;
-
-        public StudentRepository(string filePath)
-        {
-            this.filePath = filePath;
-            LoadFromFile();
-        }
-
-        public void Add(Student student)
-        {
-            students.Add(student);
-            SaveToFile();
-        }
-
-        public List<Student> GetAll()
-        {
-            return students;
-        }
-
-        public Student GetById(int studentId)
-        {
-            foreach (Student student in students)
-            {
-                if (student.StudentID == studentId)
-                {
-                    return student;
-                }
-            }
-            return null;
-        }
-
-        private void LoadFromFile()
-        {
-            if (!File.Exists(filePath))
-            {
-                return;
-            }
-
-            string[] lines = File.ReadAllLines(filePath);
-            foreach (string line in lines)
-            {
-                if (line.Trim() == "")
-                {
-                    continue;
-                }
-
-                string[] parts = line.Split('|');
-                int id = int.Parse(parts[0]);
-                students.Add(new Student(id, parts[1], parts[2]));
-            }
-        }
-
-        private void SaveToFile()
-        {
-            List<string> lines = new List<string>();
-            foreach (Student student in students)
-            {
-                lines.Add(student.StudentID + "|" + student.Name + "|" + student.Email);
-            }
-            File.WriteAllLines(filePath, lines);
-        }
+        students.Add(student);
+        Save();
     }
+
+    public List<Student> GetAll() => students;
+
+    public Student GetById(int id) => students.FirstOrDefault(s => s.StudentID == id);
+
+    public void Update(Student student)
+    {
+        students[students.FindIndex(s => s.StudentID == student.StudentID)] = student;
+        Save();
+    }
+
+    public void Delete(int id)
+    {
+        students.RemoveAll(s => s.StudentID == id);
+        Save();
+    }
+
+    private void Save() =>
+        File.WriteAllLines(filePath, students.Select(s => $"{s.StudentID}|{s.Name}|{s.Email}"));
 }

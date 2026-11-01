@@ -1,95 +1,75 @@
-using System;
-using System.Collections.Generic;
 using StudentManagement.Models;
 using StudentManagement.Services;
 
-namespace StudentManagement.UI
+namespace StudentManagement.UI;
+
+public class StudentUI(StudentService studentService)
 {
-    public class StudentUI
+    public void ShowMenu()
     {
-        private StudentService studentService;
-
-        public StudentUI(StudentService studentService)
+        while (true)
         {
-            this.studentService = studentService;
-        }
+            Console.Clear();
+            Console.WriteLine("""
+                --- Student Menu ---
+                1. Add a student
+                2. Show all students
+                3. Update a student
+                4. Delete a student
+                0. Back to main menu
+                """);
+            var choice = Input.ReadText("Choose: ");
+            Console.Clear();
 
-        public void ShowMenu()
-        {
-            bool running = true;
-            while (running)
+            switch (choice)
             {
-                Console.Clear();
-                Console.WriteLine("--- Student Menu ---");
-                Console.WriteLine("1. Add a student");
-                Console.WriteLine("2. Show all students");
-                Console.WriteLine("0. Back to main menu");
-                Console.Write("Choose: ");
-                string choice = Console.ReadLine();
-                Console.Clear();
-
-                if (choice == "1")
-                {
-                    AddStudent();
-                }
-                else if (choice == "2")
-                {
-                    ShowAllStudents();
-                }
-                else if (choice == "0")
-                {
-                    running = false;
-                }
-                else
-                {
-                    Console.WriteLine("Invalid choice.");
-                }
-
-                if (running)
-                {
-                    Console.WriteLine();
-                    Console.WriteLine("Press any key to continue...");
-                    Console.ReadKey(true);
-                }
+                case "1": AddStudent(); break;
+                case "2": ShowAllStudents(); break;
+                case "3": UpdateStudent(); break;
+                case "4": DeleteStudent(); break;
+                case "0": return;
+                default: Console.WriteLine("Invalid choice."); break;
             }
+            Input.Pause();
         }
+    }
 
-        private void AddStudent()
-        {
-            Console.Write("Enter student ID: ");
-            int id;
-            if (!int.TryParse(Console.ReadLine(), out id))
-            {
-                Console.WriteLine("Error: ID must be a number.");
-                return;
-            }
+    private void AddStudent()
+    {
+        var student = new Student(
+            Input.ReadInt("Enter student ID: "),
+            Input.ReadText("Enter name: "),
+            Input.ReadText("Enter email: "));
 
-            Console.Write("Enter name: ");
-            string name = Console.ReadLine();
+        Console.WriteLine(studentService.AddStudent(student));
+    }
 
-            Console.Write("Enter email: ");
-            string email = Console.ReadLine();
+    private void ShowAllStudents()
+    {
+        var students = studentService.GetAllStudents();
+        if (students.Count == 0)
+            Console.WriteLine("No students yet.");
 
-            Student student = new Student(id, name, email);
+        foreach (var student in students)
+            Console.WriteLine($"{student.StudentID} | {student.Name} | {student.Email}");
+    }
 
-            string message = studentService.AddStudent(student);
-            Console.WriteLine(message);
-        }
+    private void UpdateStudent()
+    {
+        ShowAllStudents();
+        var student = new Student(
+            Input.ReadInt("\nEnter ID of the student to update: "),
+            Input.ReadText("Enter new name: "),
+            Input.ReadText("Enter new email: "));
 
-        private void ShowAllStudents()
-        {
-            List<Student> students = studentService.GetAllStudents();
+        Console.WriteLine(studentService.UpdateStudent(student));
+    }
 
-            if (students.Count == 0)
-            {
-                Console.WriteLine("No students yet.");
-                return;
-            }
+    private void DeleteStudent()
+    {
+        ShowAllStudents();
+        var id = Input.ReadInt("\nEnter ID of the student to delete: ");
 
-            foreach (Student student in students)
-            {
-                Console.WriteLine(student.StudentID + " | " + student.Name + " | " + student.Email);
-            }
-        }
+        Console.WriteLine(Input.Confirm("Are you sure?") ? studentService.DeleteStudent(id) : "Delete cancelled.");
     }
 }

@@ -1,57 +1,57 @@
-using System.Collections.Generic;
 using StudentManagement.Models;
 using StudentManagement.Repositories;
 
-namespace StudentManagement.Services
+namespace StudentManagement.Services;
+
+public class EnrollmentService(
+    EnrollmentRepository enrollmentRepository,
+    StudentRepository studentRepository,
+    CourseRepository courseRepository)
 {
-    public class EnrollmentService
+    public string Enroll(int studentId, int courseId)
     {
-        private EnrollmentRepository enrollmentRepository;
-        private StudentRepository studentRepository;
-        private CourseRepository courseRepository;
+        var student = studentRepository.GetById(studentId);
+        if (student is null)
+            return "Error: Student not found.";
 
-        public EnrollmentService(
-            EnrollmentRepository enrollmentRepository,
-            StudentRepository studentRepository,
-            CourseRepository courseRepository)
-        {
-            this.enrollmentRepository = enrollmentRepository;
-            this.studentRepository = studentRepository;
-            this.courseRepository = courseRepository;
-        }
+        var course = courseRepository.GetById(courseId);
+        if (course is null)
+            return "Error: Course not found.";
 
-        public string Enroll(int studentId, int courseId)
-        {
-            Student student = studentRepository.GetById(studentId);
-            if (student == null)
-            {
-                return "Error: Student not found.";
-            }
+        if (enrollmentRepository.GetAll().Any(e => e.StudentID == studentId && e.CourseID == courseId))
+            return "Error: This student is already enrolled in this course.";
 
-            Course course = courseRepository.GetById(courseId);
-            if (course == null)
-            {
-                return "Error: Course not found.";
-            }
+        var nextId = enrollmentRepository.GetAll().Select(e => e.EnrollmentID).DefaultIfEmpty(0).Max() + 1;
+        enrollmentRepository.Add(new Enrollment(nextId, studentId, courseId));
 
-            foreach (Enrollment existing in enrollmentRepository.GetAll())
-            {
-                if (existing.StudentID == studentId && existing.CourseID == courseId)
-                {
-                    return "Error: This student is already enrolled in this course.";
-                }
-            }
-
-            int newId = enrollmentRepository.GetAll().Count + 1;
-            Enrollment enrollment = new Enrollment(newId, studentId, courseId);
-            enrollmentRepository.Add(enrollment);
-
-            return "Success: " + student.Name + " is now enrolled in " + course.CourseName + ".";
-        }
-
-        public List<Enrollment> GetAllEnrollments()
-        {
-            return enrollmentRepository.GetAll();
-        }
+        return $"Success: {student.Name} is now enrolled in {course.CourseName}.";
     }
+
+    public string UpdateEnrollment(int enrollmentId, int newCourseId)
+    {
+        var enrollment = enrollmentRepository.GetById(enrollmentId);
+        if (enrollment is null)
+            return "Error: Enrollment not found.";
+
+        var course = courseRepository.GetById(newCourseId);
+        if (course is null)
+            return "Error: Course not found.";
+
+        if (enrollmentRepository.GetAll().Any(e => e.StudentID == enrollment.StudentID && e.CourseID == newCourseId))
+            return "Error: This student is already enrolled in that course.";
+
+        enrollmentRepository.Update(enrollment with { CourseID = newCourseId });
+        return $"Success: Enrollment changed to {course.CourseName}.";
+    }
+
+    public string CancelEnrollment(int enrollmentId)
+    {
+        if (enrollmentRepository.GetById(enrollmentId) is null)
+            return "Error: Enrollment not found.";
+
+        enrollmentRepository.Delete(enrollmentId);
+        return "Success: Enrollment cancelled.";
+    }
+
+    public List<Enrollment> GetAllEnrollments() => enrollmentRepository.GetAll();
 }

@@ -1,37 +1,41 @@
-using System.Collections.Generic;
 using StudentManagement.Models;
 using StudentManagement.Repositories;
 
-namespace StudentManagement.Services
+namespace StudentManagement.Services;
+
+public class StudentService(StudentRepository studentRepository, EnrollmentRepository enrollmentRepository)
 {
-    public class StudentService
+    public string AddStudent(Student student)
     {
-        private StudentRepository studentRepository;
+        if (studentRepository.GetById(student.StudentID) is not null)
+            return "Error: A student with this ID already exists.";
 
-        public StudentService(StudentRepository studentRepository)
-        {
-            this.studentRepository = studentRepository;
-        }
-
-        public string AddStudent(Student student)
-        {
-            if (studentRepository.GetById(student.StudentID) != null)
-            {
-                return "Error: A student with this ID already exists.";
-            }
-
-            studentRepository.Add(student);
-            return "Success: Student added.";
-        }
-
-        public List<Student> GetAllStudents()
-        {
-            return studentRepository.GetAll();
-        }
-
-        public Student FindStudentById(int studentId)
-        {
-            return studentRepository.GetById(studentId);
-        }
+        studentRepository.Add(student);
+        return "Success: Student added.";
     }
+
+    public string UpdateStudent(Student student)
+    {
+        if (studentRepository.GetById(student.StudentID) is null)
+            return "Error: Student not found.";
+
+        studentRepository.Update(student);
+        return "Success: Student updated.";
+    }
+
+    public string DeleteStudent(int studentId)
+    {
+        if (studentRepository.GetById(studentId) is null)
+            return "Error: Student not found.";
+
+        if (enrollmentRepository.GetAll().Any(e => e.StudentID == studentId))
+            return "Error: Cannot delete. This student is enrolled in a course. Cancel the enrollment first.";
+
+        studentRepository.Delete(studentId);
+        return "Success: Student deleted.";
+    }
+
+    public List<Student> GetAllStudents() => studentRepository.GetAll();
+
+    public Student FindStudentById(int studentId) => studentRepository.GetById(studentId);
 }

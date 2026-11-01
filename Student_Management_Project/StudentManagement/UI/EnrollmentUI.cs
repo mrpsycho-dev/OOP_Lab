@@ -1,97 +1,70 @@
-using System;
-using System.Collections.Generic;
-using StudentManagement.Models;
 using StudentManagement.Services;
 
-namespace StudentManagement.UI
+namespace StudentManagement.UI;
+
+public class EnrollmentUI(EnrollmentService enrollmentService)
 {
-    public class EnrollmentUI
+    public void ShowMenu()
     {
-        private EnrollmentService enrollmentService;
-
-        public EnrollmentUI(EnrollmentService enrollmentService)
+        while (true)
         {
-            this.enrollmentService = enrollmentService;
+            Console.Clear();
+            Console.WriteLine("""
+                --- Enrollment Menu ---
+                1. Enroll a student in a course
+                2. Show all enrollments
+                3. Change the course of an enrollment
+                4. Cancel an enrollment
+                0. Back to main menu
+                """);
+            var choice = Input.ReadText("Choose: ");
+            Console.Clear();
+
+            switch (choice)
+            {
+                case "1": EnrollStudent(); break;
+                case "2": ShowAllEnrollments(); break;
+                case "3": UpdateEnrollment(); break;
+                case "4": CancelEnrollment(); break;
+                case "0": return;
+                default: Console.WriteLine("Invalid choice."); break;
+            }
+            Input.Pause();
         }
+    }
 
-        public void ShowMenu()
-        {
-            bool running = true;
-            while (running)
-            {
-                Console.Clear();
-                Console.WriteLine("--- Enrollment Menu ---");
-                Console.WriteLine("1. Enroll a student in a course");
-                Console.WriteLine("2. Show all enrollments");
-                Console.WriteLine("0. Back to main menu");
-                Console.Write("Choose: ");
-                string choice = Console.ReadLine();
-                Console.Clear();
+    private void EnrollStudent()
+    {
+        var studentId = Input.ReadInt("Enter student ID: ");
+        var courseId = Input.ReadInt("Enter course ID: ");
 
-                if (choice == "1")
-                {
-                    EnrollStudent();
-                }
-                else if (choice == "2")
-                {
-                    ShowAllEnrollments();
-                }
-                else if (choice == "0")
-                {
-                    running = false;
-                }
-                else
-                {
-                    Console.WriteLine("Invalid choice.");
-                }
+        Console.WriteLine(enrollmentService.Enroll(studentId, courseId));
+    }
 
-                if (running)
-                {
-                    Console.WriteLine();
-                    Console.WriteLine("Press any key to continue...");
-                    Console.ReadKey(true);
-                }
-            }
-        }
+    private void ShowAllEnrollments()
+    {
+        var enrollments = enrollmentService.GetAllEnrollments();
+        if (enrollments.Count == 0)
+            Console.WriteLine("No enrollments yet.");
 
-        private void EnrollStudent()
-        {
-            Console.Write("Enter student ID: ");
-            int studentId;
-            if (!int.TryParse(Console.ReadLine(), out studentId))
-            {
-                Console.WriteLine("Error: ID must be a number.");
-                return;
-            }
+        foreach (var enrollment in enrollments)
+            Console.WriteLine($"Enrollment {enrollment.EnrollmentID} | Student {enrollment.StudentID} | Course {enrollment.CourseID}");
+    }
 
-            Console.Write("Enter course ID: ");
-            int courseId;
-            if (!int.TryParse(Console.ReadLine(), out courseId))
-            {
-                Console.WriteLine("Error: ID must be a number.");
-                return;
-            }
+    private void UpdateEnrollment()
+    {
+        ShowAllEnrollments();
+        var enrollmentId = Input.ReadInt("\nEnter ID of the enrollment to change: ");
+        var newCourseId = Input.ReadInt("Enter the new course ID: ");
 
-            string message = enrollmentService.Enroll(studentId, courseId);
-            Console.WriteLine(message);
-        }
+        Console.WriteLine(enrollmentService.UpdateEnrollment(enrollmentId, newCourseId));
+    }
 
-        private void ShowAllEnrollments()
-        {
-            List<Enrollment> enrollments = enrollmentService.GetAllEnrollments();
+    private void CancelEnrollment()
+    {
+        ShowAllEnrollments();
+        var enrollmentId = Input.ReadInt("\nEnter ID of the enrollment to cancel: ");
 
-            if (enrollments.Count == 0)
-            {
-                Console.WriteLine("No enrollments yet.");
-                return;
-            }
-
-            foreach (Enrollment enrollment in enrollments)
-            {
-                Console.WriteLine("Enrollment " + enrollment.EnrollmentID
-                    + " | Student " + enrollment.StudentID
-                    + " | Course " + enrollment.CourseID);
-            }
-        }
+        Console.WriteLine(Input.Confirm("Are you sure?") ? enrollmentService.CancelEnrollment(enrollmentId) : "Cancel aborted.");
     }
 }

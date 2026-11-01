@@ -1,16 +1,3 @@
-namespace StudentManagement.Models
-{
-    public class Course
-    {
-        public int CourseID { get; set; }
-        public string CourseName { get; set; }
-        public int CreditHours { get; set; }
+namespace StudentManagement.Models;
 
-        public Course(int courseId, string courseName, int creditHours)
-        {
-            CourseID = courseId;
-            CourseName = courseName;
-            CreditHours = creditHours;
-        }
-    }
-}
+public record Course(int CourseID, string CourseName, int CreditHours);

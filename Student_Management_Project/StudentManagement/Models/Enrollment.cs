@@ -1,16 +1,3 @@
-namespace StudentManagement.Models
-{
-    public class Enrollment
-    {
-        public int EnrollmentID { get; set; }
-        public int StudentID { get; set; }
-        public int CourseID { get; set; }
+namespace StudentManagement.Models;
 
-        public Enrollment(int enrollmentId, int studentId, int courseId)
-        {
-            EnrollmentID = enrollmentId;
-            StudentID = studentId;
-            CourseID = courseId;
-        }
-    }
-}
+public record Enrollment(int EnrollmentID, int StudentID, int CourseID);

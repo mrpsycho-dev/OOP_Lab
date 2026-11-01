@@ -1,16 +1,3 @@
-namespace StudentManagement.Models
-{
-    public class Student
-    {
-        public int StudentID { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
+namespace StudentManagement.Models;
 
-        public Student(int studentId, string name, string email)
-        {
-            StudentID = studentId;
-            Name = name;
-            Email = email;
-        }
-    }
-}
+public record Student(int StudentID, string Name, string Email);
