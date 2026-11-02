@@ -21,6 +21,8 @@ public class EnrollmentService(
         if (enrollmentRepository.GetAll().Any(e => e.StudentID == studentId && e.CourseID == courseId))
             return "Error: This student is already enrolled in this course.";
 
+        // defaultIfEmpty is used to handle the case when there are no enrollments yet,
+        // so Max() doesn't throw an exception.
         var nextId = enrollmentRepository.GetAll().Select(e => e.EnrollmentID).DefaultIfEmpty(0).Max() + 1;
         enrollmentRepository.Add(new Enrollment(nextId, studentId, courseId));
 

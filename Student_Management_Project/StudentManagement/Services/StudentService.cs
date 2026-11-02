@@ -28,6 +28,8 @@ public class StudentService(StudentRepository studentRepository, EnrollmentRepos
         if (studentRepository.GetById(studentId) is null)
             return "Error: Student not found.";
 
+        // enrollment repo used here.
+        // to check if student is enrolled in any course before deleting
         if (enrollmentRepository.GetAll().Any(e => e.StudentID == studentId))
             return "Error: Cannot delete. This student is enrolled in a course. Cancel the enrollment first.";
 

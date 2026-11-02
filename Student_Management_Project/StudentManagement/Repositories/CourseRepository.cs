@@ -9,7 +9,7 @@ public class CourseRepository(string filePath)
         .Select(line => line.Split('|'))
         .Select(parts => new Course(int.Parse(parts[0]), parts[1], int.Parse(parts[2])))
         .ToList();
-
+    
     public void Add(Course course)
     {
         courses.Add(course);
@@ -32,6 +32,9 @@ public class CourseRepository(string filePath)
         Save();
     }
 
+
+    // courses.select means the List is converted to string,
+    // and the string is written to the file
     private void Save() =>
         File.WriteAllLines(filePath, courses.Select(c => $"{c.CourseID}|{c.CourseName}|{c.CreditHours}"));
 }
