@@ -40,4 +40,45 @@ public class StudentService(StudentRepository studentRepository, EnrollmentRepos
     public List<Student> GetAllStudents() => studentRepository.GetAll();
 
     public Student FindStudentById(int studentId) => studentRepository.GetById(studentId);
+
+
+    // search filter
+    public List<Student> SearchStudents(string name, int? idLow, int? idHigh, string email)
+    {
+        List<Student> allStudents = studentRepository.GetAll();
+
+        List<Student> results = new List<Student>();
+
+        foreach (Student student in allStudents)
+        {
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                if (!student.Name.Contains(name.Trim(), StringComparison.OrdinalIgnoreCase))
+                    continue;
+            }
+
+            if (idLow != null)
+            {
+                if (student.StudentID < idLow.Value)
+                    continue;
+            }
+
+            if (idHigh != null)
+            {
+                if (student.StudentID > idHigh.Value)
+                    continue;
+            }
+
+            if (!string.IsNullOrWhiteSpace(email))
+            {
+                if (!student.Email.Equals(email.Trim(), StringComparison.OrdinalIgnoreCase))
+                    continue;
+            }
+
+            results.Add(student);
+        }
+
+        return results;
+    }
+
 }

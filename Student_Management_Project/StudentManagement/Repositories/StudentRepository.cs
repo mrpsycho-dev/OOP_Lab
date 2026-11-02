@@ -42,4 +42,5 @@ public class StudentRepository(string filePath)
 
     private void Save() =>
         File.WriteAllLines(filePath, students.Select(s => $"{s.StudentID}|{s.Name}|{s.Email}"));
+
 }
